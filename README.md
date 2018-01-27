@@ -1,1 +1,3 @@
 # DistributedSystem
+
+The distributed system for executing shell command requests has been implemented by using a multithreaded server. The server has a thread module which can connect to other remote servers (instances in case of AWS) and send over the Grep commands (or any other shell command) to the remote servers and collect the results from them. The server also runs the same Grep on its own machine and collates every result set and stores it in a log file. The connection between the main server and the remote server is momentary and is created only to send over the command and receive the results, post that, it is terminated.  
